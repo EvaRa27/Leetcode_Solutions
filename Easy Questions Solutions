@@ -1,0 +1,17 @@
+1). Two sums
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        store = {}
+        for i in range(len(nums)):
+            if target - nums[i] in store:
+                return [store[target - nums[i]],i]
+            else: 
+                store[nums[i]] = i
+input_list = [2,7,11,15]
+ob1 = Solution()
+print(ob1.twoSum(input_list,9))
